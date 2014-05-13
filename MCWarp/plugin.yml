@@ -1,0 +1,42 @@
+name: MCWarp
+version: 1
+main: aplicable.mcplugin.mcwarp.MCWarp
+commands:
+  warp:
+    description: Allows for warping between locations.
+permissions:
+  warp.*:
+    description: Gives access to all money commands
+    children:
+      warp.warp: true
+      warp.back: true
+      warp.add: true
+      warp.del: true
+      warp.list: true
+      warp.listother: true
+      warp.warpother: true
+      warp.help: true
+  warp.warp:
+    descriptions: Teleports you to a warp-location
+    default: true
+  warp.back:
+    descriptions: Teleports you back to your last location
+    default: true
+  warp.add:
+    descriptions: Adds a warp-location to your list
+    default: true
+  warp.del:
+    descriptions: Removes a warp-location from your list
+    default: true
+  warp.list:
+    descriptions: Lists your warp-locations
+    default: true
+  warp.listother:
+    descriptions: Lists the warp-locations of another player
+    default: op
+  warp.warpother:
+    descriptions: Warps to another player's warp-location
+    default: op
+  warp.help:
+    descriptions: Describes the warp command
+    default: true
